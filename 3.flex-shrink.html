@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Grow</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .wrapper {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      .content {
+        /* Set display flex */
+        display: flex;
+        background-color: grey;
+      }
+      .content > * {
+        height: 100px;
+        width: 320px;
+      }
+      .content div:nth-child(1) {
+        background-color: brown;
+        flex-shrink: 1;
+      }
+      .content div:nth-child(2) {
+        background-color: cornflowerblue;
+        /* set the flex shrink 3 will make width of the div wider 3 times when the browser get smaller  */
+        flex-shrink: 3;
+      }
+      .content div:nth-child(3) {
+        background-color: darkorchid;
+        /* set the flex shrink 6 will make width of the div wider 6 times when the browser get smaller */
+        flex-shrink: 6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Grow</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .content {
+        /* Set display flex */
+        display: flex;
+        background-color: grey;
+      }
+      .content > * {
+        height: 100px;
+        min-width: 100px;
+        /* set flex grow equal to all div */
+        /* flex-grow: 1; */
+      }
+      .content div:nth-child(1) {
+        background-color: brown;
+        flex-grow: 1;
+      }
+      .content div:nth-child(2) {
+        background-color: cornflowerblue;
+        /* set the flex grow 2 will make width of the div wider 2 times  */
+        flex-grow: 2;
+      }
+      .content div:nth-child(3) {
+        background-color: darkorchid;
+        /* set the flex grow 3 will make width of the div wider 3 times  */
+        flex-grow: 3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </body>
+</html>

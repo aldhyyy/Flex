@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Grow</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .wrapper {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      .content {
+        /* Set display flex */
+        display: flex;
+        background-color: grey;
+        /* set the flex wrap will make the element goes down when the browser get smaller  */
+        /* you can also set the element goes up using wrap-reverse  */
+        flex-wrap: wrap;
+      }
+      .content > * {
+        height: 100px;
+        width: 320px;
+        flex-grow: 1;
+      }
+      .content div:nth-child(1) {
+        background-color: brown;
+      }
+      .content div:nth-child(2) {
+        background-color: cornflowerblue;
+      }
+      .content div:nth-child(3) {
+        background-color: darkorchid;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+  </body>
+</html>

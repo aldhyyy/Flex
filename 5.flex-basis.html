@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Grow</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .wrapper {
+        width: 100%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      .content {
+        /* Set display flex */
+        display: flex;
+        background-color: grey;
+        flex-wrap: wrap;
+      }
+      .content > * {
+        height: 100px;
+        /* set flex basis to 200px, when the browser get smaller, elements will move to the bottom*/
+        /* flex-basis: 200px; */
+        /* will make the last element grow to full width when the browser get smaller*/
+        /* flex-grow: 1; */
+        /* shorthand: flex grow flex-shrink flex-basis */
+        /* flex: 1 0 200px; */
+      }
+
+      /* we can also set the flex basis in the each elements */
+      .content div:nth-child(1) {
+        background-color: brown;
+        /* will grow based on the rest of content width */
+        flex-grow: 1;
+      }
+      .content div:nth-child(2) {
+        background-color: cornflowerblue;
+        /* will keep the width 100px when the browser get smaller */
+        flex-basis: 100px;
+      }
+      .content div:nth-child(3) {
+        /* will keep the width 200px when the browser get smaller */
+        background-color: darkorchid;
+        flex-basis: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+  </body>
+</html>
